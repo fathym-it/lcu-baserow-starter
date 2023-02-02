@@ -1,7 +1,7 @@
 {
   "Package": {
-    "Name": "@fathym-it/lcu-baserow-starter",
-    "Description": "An LCU for installing @fathym-it/lcu-baserow-starter.",
+    "Name": "MUI Baserow Carousel",
+    "Description": "A react frontend for your Baserow.",
     "Button": "Launch",
     "Image": "https://www.fathym.com/assets/images/logo.png",
     "PreviewImage": "https://www.fathym.com/assets/images/logo.png",

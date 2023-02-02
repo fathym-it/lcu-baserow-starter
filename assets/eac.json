@@ -2,21 +2,95 @@
   "Applications": {
     "$1": {
       "Application": {
-        "Description": "An application for hosting the files fromthe NPM package '{{NPM_PACKAGE}}'",
-        "Name": "NPM Package Deploy: {{NPM_PACKAGE}}"
+        "Description": "Baserow API",
+        "Name": "Baserow API"
       },
       "LookupConfig": {
-        "PathRegex": "/packages/{{NPM_PACKAGE}}.*"
+        "PathRegex": "/api/baserow.*"
       },
       "LowCodeUnit": {
-        "Package": "{{NPM_PACKAGE}}",
-        "Version": "{{PACKAGE_VERSION}}",
+        "APIRoot": "https://api.baserow.io/api",
+        "Security": "Authorization~Token {{SECURITY-TOKEN}}",
+        "Type": "API"
+      },
+      "Processor": {
+        "InboundPath": "/api/baserow",
+        "Type": "Proxy"
+      }
+    },
+    "$2": {
+      "Application": {
+        "Description": "Baserow React Carousel",
+        "Name": "Baserow React Carousel"
+      },
+      "LookupConfig": {
+        "PathRegex": "/baserow/carousel.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@fathym-it/mui-baserow-carousel",
+        "Version": "latest",
         "Type": "NPM"
       },
       "Processor": {
-        "BaseHref": "/packages/{{NPM_PACKAGE}}/",
+        "BaseHref": "/baserow/carousel/",
         "DefaultFile": "index.html",
         "Type": "DFS"
+      }
+    },
+    "$3": {
+      "Application": {
+        "Description": "The landing page for the baserow",
+        "Name": "Home Page"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "LowCodeUnit": {
+        "SourceControlLookup": "fork|github://fathym-it/baserow-landing-page",
+        "Build": "latest",
+        "Path": "lcu-github-plasmic-artifacts-release.yml",
+        "Type": "GitHub"
+      },
+      "Processor": {
+        "BaseHref": "/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    }
+  },
+  "Environments": {
+    "$#.PrimaryEnvironment": {
+      "Artifacts": {
+        "plasmic-build-release": {
+          "Name": "Plasmic Build/Release",
+          "Output": "./public",
+          "Type": "GitHub",
+          "BuildCommand": "npm run build",
+          "InstallCommand": "npm i",
+          "NPMRegistry": "https://registry.npmjs.org/"
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release-plasmic": {
+          "Name": "GitHub Artifacts - Release - Plasmic",
+          "Path": "lcu-github-plasmic-artifacts-release.yml",
+          "ArtifactLookups": ["plasmic-build-release"],
+          "Templates": [
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/plasmic-artifacts/_header.hbs.yml",
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/plasmic-artifacts/release-flow.yml"
+          ]
+        }
+      },
+      "Sources": {
+        "fork|github://fathym-it/baserow-landing-page": {
+          "DevOpsActionTriggerLookups": ["github-artifacts-release-plasmic"],
+          "Branches": ["main"],
+          "MainBranch": "main",
+          "Organization": "fathym-it",
+          "Repository": "baserow-landing-page",
+          "Name": "github://fathym-it/baserow-landing-page",
+          "Type": "GitHub"
+        }
       }
     }
   }
