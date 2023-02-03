@@ -14,7 +14,7 @@
         "Type": "API"
       },
       "Processor": {
-        "InboundPath": "/api/baserow",
+        "InboundPath": "api/baserow",
         "Type": "Proxy"
       }
     },
@@ -39,8 +39,8 @@
     },
     "$3": {
       "Application": {
-        "Description": "The landing page for the baserow",
-        "Name": "Home Page"
+        "Description": "The landing page for Baserow",
+        "Name": "Baserow Home Page"
       },
       "LookupConfig": {
         "PathRegex": "/.*"

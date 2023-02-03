@@ -1,6 +1,6 @@
 {
   "SECURITY-TOKEN": {
     "type": "input",
-    "message": "Enter BASEROW_API_TOKEN:"
+    "message": "Enter Baserow API Token:"
   }
 }
