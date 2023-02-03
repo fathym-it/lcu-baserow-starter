@@ -10,7 +10,7 @@
       },
       "LowCodeUnit": {
         "APIRoot": "https://api.baserow.io/api",
-        "Security": "Authorization~Token {{SECURITY-TOKEN}}",
+        "Security": "Authorization~Token {{SECURITY_TOKEN}}",
         "Type": "API"
       },
       "Processor": {
