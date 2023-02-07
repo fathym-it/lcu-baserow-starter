@@ -2,11 +2,8 @@
   "Package": {
     "Name": "MUI Baserow Carousel",
     "Description": "A react frontend for your Baserow.",
-    "Button": "Launch",
-    "Image": "https://www.fathym.com/assets/images/logo.png",
-    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
-    "SuccessType": "Project"
-  },
-  "EaC": "./assets/eac.json",
-  "Parameters": "./assets/parameters.json"
+    "Image": "https://www.fathym.com/img/baserow-logo500x275.jpg",
+    "PreviewImage": "https://www.fathym.com/img/baserow-thumbnail-logo.jpg",
+    "UsesGit": true
+  }
 }
