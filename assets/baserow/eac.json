@@ -20,53 +20,53 @@
           "InboundPath": "api/baserow"
         },
         "Type": "ProxyProcessor"
+      }
+    },
+    "{{$2}}-mui-baserow-carousel": {
+      "Details": {
+        "Description": "Baserow React Carousel",
+        "Name": "Baserow React Carousel"
       },
-      "{{$2}}-mui-baserow-carousel": {
-        "Details": {
-          "Description": "Baserow React Carousel",
-          "Name": "Baserow React Carousel"
-        },
-        "LookupConfig": {
-          "PathRegex": "/baserow/carousel.*"
-        },
-        "Package": {
-          "Details": {
-            "Package": "@fathym-it/mui-baserow-carousel",
-            "Version": "latest"
-          },
-          "Type": "NPMLowCodeUnit"
-        },
-        "Processor": {
-          "Details": {
-            "BaseHref": "/baserow/carousel/",
-            "DefaultFile": "index.html"
-          },
-          "Type": "DFSProcessor"
-        }
+      "LookupConfig": {
+        "PathRegex": "/baserow/carousel.*"
       },
-      "{{$3}}-baserow-landing-page": {
+      "Package": {
         "Details": {
-          "Description": "The landing page for Baserow",
-          "Name": "Baserow Home Page"
+          "Package": "@fathym-it/mui-baserow-carousel",
+          "Version": "latest"
         },
-        "LookupConfig": {
-          "PathRegex": "/.*"
+        "Type": "NPMLowCodeUnit"
+      },
+      "Processor": {
+        "Details": {
+          "BaseHref": "/baserow/carousel/",
+          "DefaultFile": "index.html"
         },
-        "Package": {
-          "Details": {
-            "Build": "latest",
-            "Path": "lcu-github-artifacts-release.yml"
-          },
-          "SourceControlLookup": "github://{{ORGANIZATION}}/baserow-landing-page",
-          "Type": "GitHubLowCodeUnit"
+        "Type": "DFSProcessor"
+      }
+    },
+    "{{$3}}-baserow-landing-page": {
+      "Details": {
+        "Description": "The landing page for Baserow",
+        "Name": "Baserow Home Page"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "Package": {
+        "Details": {
+          "Build": "latest",
+          "Path": "lcu-github-artifacts-release.yml"
         },
-        "Processor": {
-          "Details": {
-            "BaseHref": "/",
-            "DefaultFile": "index.html"
-          },
-          "Type": "DFSProcessor"
-        }
+        "SourceControlLookup": "github://{{ORGANIZATION}}/baserow-landing-page",
+        "Type": "GitHubLowCodeUnit"
+      },
+      "Processor": {
+        "Details": {
+          "BaseHref": "/",
+          "DefaultFile": "index.html"
+        },
+        "Type": "DFSProcessor"
       }
     }
   },
