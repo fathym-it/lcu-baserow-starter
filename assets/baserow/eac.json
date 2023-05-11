@@ -56,7 +56,7 @@
       "Package": {
         "Details": {
           "Build": "latest",
-          "Path": "lcu-github-artifacts-release.yml"
+          "Path": "lcu-github-plasmic-artifacts-release.yml"
         },
         "SourceControlLookup": "github://{{ORGANIZATION}}/baserow-landing-page",
         "Type": "GitHubLowCodeUnit"
