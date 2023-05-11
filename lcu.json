@@ -3,7 +3,19 @@
     "Name": "MUI Baserow Carousel",
     "Description": "A react frontend for your Baserow.",
     "Image": "https://www.fathym.com/img/baserow-logo500x275.jpg",
-    "PreviewImage": "https://www.fathym.com/img/baserow-thumbnail-logo.jpg",
-    "UsesGit": true
+    "PreviewImage": "https://www.fathym.com/img/baserow-thumbnail-logo.jpg"
+  },
+  "Configurations": {
+    "Full": {
+      "Name": "MUI Baserow Carousel",
+      "Description": "A react frontend for your Baserow.",
+      "Phases": [
+        {
+          "Name": "Setup MUI Baserow",
+          "Order": 1,
+          "Asset": "baserow"
+        }
+      ]
+    }
   }
 }
