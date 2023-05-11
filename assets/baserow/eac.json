@@ -99,7 +99,7 @@
       },
       "Sources": {
         "fork|github://fathym-it/baserow-landing-page": {
-          "DevOpsActionTriggerLookups": ["github-artifacts-release-gatsby"],
+          "DevOpsActionTriggerLookups": ["github-artifacts-release-plasmic"],
           "Details": {
             "Branches": ["main"],
             "MainBranch": "main",
