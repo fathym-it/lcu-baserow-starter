@@ -46,7 +46,7 @@
         "PathRegex": "/.*"
       },
       "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-it/baserow-landing-page",
+        "SourceControlLookup": "fork|github://fathym-it/landing-page-baserow-launchpad",
         "Build": "latest",
         "Path": "lcu-github-plasmic-artifacts-release.yml",
         "Type": "GitHub"
@@ -82,13 +82,13 @@
         }
       },
       "Sources": {
-        "fork|github://fathym-it/baserow-landing-page": {
+        "fork|github://fathym-it/landing-page-baserow-launchpad": {
           "DevOpsActionTriggerLookups": ["github-artifacts-release-plasmic"],
           "Branches": ["main"],
           "MainBranch": "main",
           "Organization": "fathym-it",
-          "Repository": "baserow-landing-page",
-          "Name": "github://fathym-it/baserow-landing-page",
+          "Repository": "landing-page-baserow-launchpad",
+          "Name": "github://fathym-it/landing-page-baserow-launchpad",
           "Type": "GitHub"
         }
       }
