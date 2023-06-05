@@ -58,7 +58,7 @@
           "Build": "latest",
           "Path": "lcu-github-plasmic-artifacts-release.yml"
         },
-        "SourceControlLookup": "github://{{ORGANIZATION}}/baserow-landing-page",
+        "SourceControlLookup": "github://{{ORGANIZATION}}/landing-page-baserow-launchpad",
         "Type": "GitHubLowCodeUnit"
       },
       "Processor": {
@@ -98,14 +98,14 @@
         }
       },
       "Sources": {
-        "fork|github://fathym-it/baserow-landing-page": {
+        "fork|github://fathym-it/landing-page-baserow-launchpad": {
           "DevOpsActionTriggerLookups": ["github-artifacts-release-plasmic"],
           "Details": {
             "Branches": ["main"],
             "MainBranch": "main",
             "Organization": "{{ORGANIZATION}}",
-            "Repository": "baserow-landing-page",
-            "Name": "github://{{ORGANIZATION}}/baserow-landing-page"
+            "Repository": "landing-page-baserow-launchpad",
+            "Name": "github://{{ORGANIZATION}}/landing-page-baserow-launchpad"
           },
           "Type": "GitHubSourceControl"
         }
@@ -117,7 +117,7 @@
       "ApplicationLookups": [
         "{{$1}}-baserow-api",
         "{{$2}}-mui-baserow-carousel",
-        "{{$3}}-baserow-landing-page"
+        "{{$3}}-landing-page-baserow-launchpad"
 
       ]
     }
