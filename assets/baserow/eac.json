@@ -45,7 +45,7 @@
         "Type": "DFSProcessor"
       }
     },
-    "{{$3}}-baserow-landing-page": {
+    "{{$3}}-landing-page-baserow-launchpad": {
       "Details": {
         "Description": "The landing page for Baserow",
         "Name": "Baserow Home Page"
