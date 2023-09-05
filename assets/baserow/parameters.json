@@ -4,7 +4,7 @@
     "Prompts": [
       {
         "Type": "eac:projects|select",
-        "Message": "Choose the project to deploy the MUI Baserow Starter to?",
+        "Message": "Choose the project to deploy the Baserow Launch Pad to?",
         "Arguments": {
           "CreateText": "Create a project"
         }

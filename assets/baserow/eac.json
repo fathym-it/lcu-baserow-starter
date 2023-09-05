@@ -114,6 +114,10 @@
   },
   "Projects": {
     "{{PROJECT_LOOKUP}}": {
+      "Details": {
+        "Name": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Name}}{{Details.Name}}{{/if}}{{else}}Baserow Launch Pad{{/if}}",
+        "Description": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Description}}{{Details.Description}}{{/if}}{{else}}A Material UI React starter site integrated with Baserow as a content management solution.{{/if}}"
+      },
       "ApplicationLookups": [
         "{{$1}}-baserow-api",
         "{{$2}}-mui-baserow-carousel",

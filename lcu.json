@@ -1,7 +1,7 @@
 {
   "Package": {
-    "Name": "MUI Baserow Carousel",
-    "Description": "A react frontend for your Baserow.",
+    "Name": "Baserow Launch Pad",
+    "Description": "A Material UI React starter site integrated with Baserow as a content management solution.",
     "Image": "https://www.fathym.com/img/baserow-logo500x275.jpg",
     "PreviewImage": "https://www.fathym.com/img/baserow-thumbnail-logo.jpg",
     "Intents":[
@@ -13,11 +13,11 @@
   },
   "Configurations": {
     "Full": {
-      "Name": "MUI Baserow Carousel",
-      "Description": "A react frontend for your Baserow.",
+      "Name": "Baserow Launch Pad",
+      "Description": "A Material UI React starter site integrated with Baserow as a content management solution.",
       "Phases": [
         {
-          "Name": "Setup MUI Baserow",
+          "Name": "Setting Up Baserow Launch Pad",
           "Order": 1,
           "Asset": "baserow"
         }
